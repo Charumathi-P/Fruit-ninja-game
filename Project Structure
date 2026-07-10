@@ -1,0 +1,27 @@
+Fruit-Ninja-Game/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+│
+├── assets/
+│   ├── images/
+│   │   ├── apple.png
+│   │   ├── banana.png
+│   │   ├── orange.png
+│   │   ├── watermelon.png
+│   │   ├── pineapple.png
+│   │   ├── bomb.png
+│   │   └── background.jpg
+│   │
+│   └── sounds/
+│       ├── slice.mp3
+│       ├── bomb.mp3
+│       ├── gameover.mp3
+│       └── background.mp3
+│
+└── screenshots/
+    ├── home.png
+    ├── gameplay.png
+    └── gameover.png
