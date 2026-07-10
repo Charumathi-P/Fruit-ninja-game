@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Ninja Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="menu">
+        <h1>🍉 Fruit Ninja</h1>
+        <p>Slice the fruits and avoid the bombs!</p>
+        <button id="startBtn">Start Game</button>
+    </div>
+    <!-- HUD -->
+    <div id="hud">
+        <div class="box">
+            Score :
+            <span id="score">0</span>
+        </div>
+        <div class="box">
+            High Score :
+            <span id="highScore">0</span>
+        </div>
+        <div class="box">
+            Lives :
+            <span id="lives">3</span>
+        </div>
+    </div>
+    <!-- Game Canvas -->
+    <canvas id="gameCanvas"></canvas>
+    <!-- Pause Button -->
+    <button id="pauseBtn">
+        Pause
+    </button>
+    <!-- Game Over Screen -->
+    <div id="gameOver">
+        <h2>Game Over</h2>
+        <p>Your Score</p>
+        <h1 id="finalScore">
+            0
+        </h1>
+        <button id="restartBtn">
+            Play Again
+        </button>
+    </div>
+    <!-- Sound Effects -->
+    <audio id="sliceSound">
+        <source src="assets/sounds/slice.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bombSound">
+        <source src="assets/sounds/bomb.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="gameOverSound">
+        <source src="assets/sounds/gameover.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bgMusic" loop>
+        <source src="assets/sounds/background.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
