@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+body{
+    overflow:hidden;
+    background:#1d1d1d;
+}
+/* Canvas */
+#gameCanvas{
+    display:block;
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(#6dd5fa,#ffffff);
+    cursor:crosshair;
+}
+/* Home Screen */
+#menu{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.65);
+    color:white;
+    z-index:100;
+}
+#menu h1{
+    font-size:70px;
+    margin-bottom:20px;
+    text-shadow:4px 4px 10px black;
+}
+#menu p{
+    font-size:24px;
+    margin-bottom:40px;
+}
+/* Buttons */
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff9800;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+button:hover{
+    transform:scale(1.08);
+    background:#ff5722;
+}
+/* HUD */
+
+#hud{
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:20px;
+    z-index:20;
+}
+.box{
+    padding:12px 22px;
+    background:white;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+/* Pause */
+#pauseBtn{
+    position:absolute;
+    right:20px;
+    top:20px;
+    z-index:30;
+}
+/* Game Over */
+#gameOver{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:rgba(0,0,0,.8);
+    color:white;
+    z-index:150;
+}
+#gameOver h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+#gameOver p{
+    font-size:24px;
+    margin-bottom:15px;
+}
+#finalScore{
+    font-size:70px;
+    color:gold;
+    margin-bottom:35px;
+}
+/* Responsive */
+@media(max-width:768px){
+    #menu h1{
+        font-size:45px;
+    }
+    #menu p{
+        font-size:18px;
+    }
+    button{
+        font-size:16px;
+        padding:12px 25px;
+    }
+    .box{
+        font-size:16px;
+        padding:10px 15px;
+    }
+    #hud{
+        gap:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+/* Animation */
+@keyframes pop{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+#gameOver{
+    animation:pop .5s ease;
+}
+#menu h1{
+    animation:pop .8s;
+}
+button:active{
+    transform:scale(.95);
+}
