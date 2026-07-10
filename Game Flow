@@ -1,0 +1,24 @@
+Home Screen
+      │
+      ▼
+Start Game
+      │
+      ▼
+Random Fruits Spawn
+      │
+      ▼
+Slice Fruits
+      │
+      ├── Fruit → +10 Points
+      │
+      ├── Combo → Bonus
+      │
+      ├── Miss Fruit → Lose Life
+      │
+      └── Bomb → Game Over
+      │
+      ▼
+Save High Score
+      │
+      ▼
+Play Again
